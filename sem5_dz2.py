@@ -12,10 +12,11 @@ def calc_bonus(names: list[str], rates: list[int], percs: list[str]) -> dict:
     """
     Возвращает словарь с премиями по именам.
     """
-    calc = {}
-    for name, rate, perc in zip(names, rates, percs):
-        perc = float(perc[:-1])
-        calc[name] = round((rate * perc/100), 2)
+    calc = {name: round((rate * float(perc[:-1]) / 100, 2) for name, rate, perc in zip(names, rates, percs)}
+    # calc = {}
+    # for name, rate, perc in zip(names, rates, percs):
+    #     perc = float(perc[:-1])
+    #     calc[name] = round((rate * perc/100), 2)
     return calc
 
 
